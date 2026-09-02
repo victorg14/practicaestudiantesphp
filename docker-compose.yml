@@ -1,0 +1,9 @@
+services:
+  apache:
+    build: ./apache
+    container_name: server-apache-estudiantes
+    restart: always
+    volumes:
+      - ./proyectos:/var/www/html
+    ports:
+      - "8099:80"
